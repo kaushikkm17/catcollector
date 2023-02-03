@@ -74,10 +74,14 @@ WSGI_APPLICATION = 'catcollector.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
+DATABASES = DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'catcollector',
+        'NAME': 'kaushikmondal1717/catcollector-0217',
+        'USER': 'kaushikmondal1717',
+        'PASSWORD': 'v2_3yhpk_NNKiKTqSbAhYPRhvaC9dphZ',
+        'HOST': 'db.bit.io',
+        'PORT': '5432',
     }
 }
 
@@ -123,3 +127,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+import django_on_heroku
+django_on_heroku.settings(locals())
