@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if object %}
+<h1>
+    {% comment %} using materialize class  {% endcomment %}
+    Edit<span class="card-title">A <span class='{{object.color.lower}}-text'>{{object.color.capitalize}}</span></span>
+</h1>
+{% else %}
+<h1>Add New Toy</h1>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input class="btn green" type="submit" value="Submit">
+</form>
+
+{% endblock %}

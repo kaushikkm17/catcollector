@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Toy Detail</h1>
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">A <span class='{{object.color.lower}}-text'>{{object.color.capitalize}}</span> {{object.name}}</span>
+    </div>
+    <div class="card-action">
+        <a href="{% url 'toy_update' object.id %}">Edit</a>
+        <a href="{% url 'toy_delete' object.id %}">Delete</a>
+    </div>
+</div>
+
+{% endblock %}
