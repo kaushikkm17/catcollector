@@ -22,7 +22,7 @@
         </div>
     </div>
     {% for photo in cat.photo_set.all %}
-      <img src="{{photo.url}}" alt="{{cat.name}}">
+      <img class="responsive-img s4" src="{{photo.url}}" alt="{{cat.name}}">
     {%empty%}
       <div class="card-panel teal-text center-align">No Photos</div>
     {%endfor%}
