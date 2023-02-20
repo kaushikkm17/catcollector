@@ -74,14 +74,18 @@ WSGI_APPLICATION = 'catcollector.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = DATABASES = {
+import os
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'kaushikmondal1717/catcollector-0217',
-        'USER': 'kaushikmondal1717',
-        'PASSWORD': 'v2_3yhpk_NNKiKTqSbAhYPRhvaC9dphZ',
+        'NAME': os.environ.get('DATABASE_NAME'),
+        'USER': os.environ.get('USERNAME'),
+        'PASSWORD': os.environ.get('PASSWORD'),
         'HOST': 'db.bit.io',
         'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
     }
 }
 
