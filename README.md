@@ -1,4 +1,7 @@
-# Getting Started:
+# Cat Collector
+This is a CRUD application to keep track of cats, their associated toys, their feeding schedules, and upload pictures to Amazon S3.
+
+## Getting Started:
 Click [here](https://catcollector-0217-kaushik.herokuapp.com/) to see the deployed app
 
 ## Technologies used:
